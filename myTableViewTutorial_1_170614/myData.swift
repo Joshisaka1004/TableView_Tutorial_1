@@ -12,11 +12,15 @@ import UIKit
 struct myData {
     var puzzles = [String]() //first our arrays are empty
     var checkmarks = [Bool]()
+    var colors = [UIColor]()
     //the init()-function gives certain start values to our arrays; we simply fill the "boolean"-array with as many "false"-values as the puzzle array has elements.
     init() {
         puzzles = ["Sudoku", "Kakuro", "Hakyuu", "Nurikabe", "Battleships"]
         for _ in 0..<puzzles.count {
             checkmarks.append(false)
+        }
+        for _ in 0..<puzzles.count {
+            colors.append(UIColor.white)
         }
     }
 }

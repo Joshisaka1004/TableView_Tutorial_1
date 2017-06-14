@@ -34,8 +34,10 @@ class myTableViewController: UITableViewController {
         
         if contentForRows.checkmarks[indexPath.row] == false {
             myCells.accessoryType = .none
+            myCells.backgroundColor = contentForRows.colors[indexPath.row]
         } else {
             myCells.accessoryType = .checkmark
+            myCells.backgroundColor = contentForRows.colors[indexPath.row]
         }
         
         //At the beginning we do not have any checkmarks for our rows.
@@ -46,12 +48,16 @@ class myTableViewController: UITableViewController {
         let mySelection = tableView.cellForRow(at: indexPath)
         if contentForRows.checkmarks[indexPath.row] == false {
             contentForRows.checkmarks[indexPath.row] = !contentForRows.checkmarks[indexPath.row]
+            contentForRows.colors[indexPath.row] = UIColor.yellow
             mySelection?.accessoryType = .checkmark
+            mySelection?.backgroundColor = contentForRows.colors[indexPath.row]
         } else {
             contentForRows.checkmarks[indexPath.row] = !contentForRows.checkmarks[indexPath.row]
+            contentForRows.colors[indexPath.row] = UIColor.white
             mySelection?.accessoryType = .none
+            mySelection?.backgroundColor = contentForRows.colors[indexPath.row]
         }
-        tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }
 
