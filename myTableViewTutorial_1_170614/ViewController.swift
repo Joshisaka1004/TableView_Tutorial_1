@@ -21,16 +21,43 @@ class myTableViewController: UITableViewController {
     //But we MUST implement two methods to make our table work at all:
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return contentForRows.puzzles.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let myCells = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! myCellView
+        
         //above: the reusable cells of our table with the specified identifier and the specified index path is now downcasted as "myCellView", this means that our protoype cell must now be referenced to via our created class for this table view cell. The constant "myCells" is now the reference to the reusable (protoype) cells which are defined via our class "myCellView"
-        myCells.myLabel.text = "Kakuro"
-        //And now we refer to the Outlet variable "myLabel" in this class for the rable view cell. We have access to this variable because we created the reference above via the variable "myCells" and the downcasting "as! myCellView".
-        myCells.accessoryType = .none
+        
+        myCells.myLabel.text = contentForRows.puzzles[indexPath.row]
+        
+        //And now we refer to the Outlet variable "myLabel" in this class for the table view cell. We have access to this variable because we created the reference above via the variable "myCells" and the downcasting "as! myCellView". On the right side we refer to the struct which is stored in the variable "contentForRows"; via this variable having now access to the struct myData, we can get a reference to the instance variable (property) "puzzles" and we now know how to fill the label according to the "indexPath.row"-subscript of the puzzles array.
+        
+        if contentForRows.checkmarks[indexPath.row] == false {
+            myCells.accessoryType = .none
+        } else {
+            myCells.accessoryType = .checkmark
+        }
+        
         //At the beginning we do not have any checkmarks for our rows.
+        
         return myCells
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let mySelection = tableView.cellForRow(at: indexPath)
+        if contentForRows.checkmarks[indexPath.row] == false {
+            contentForRows.checkmarks[indexPath.row] = !contentForRows.checkmarks[indexPath.row]
+            mySelection?.accessoryType = .checkmark
+        } else {
+            contentForRows.checkmarks[indexPath.row] = !contentForRows.checkmarks[indexPath.row]
+            mySelection?.accessoryType = .none
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
+
+
+
+
+
+
 

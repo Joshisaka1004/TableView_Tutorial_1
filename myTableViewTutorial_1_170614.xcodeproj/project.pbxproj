@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B32F0B71EF1BAF50078563E /* myCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B32F0B61EF1BAF50078563E /* myCellView.swift */; };
+		3B32F0B91EF1DC7B0078563E /* myData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B32F0B81EF1DC7B0078563E /* myData.swift */; };
 		3BDB0AC31EF18CA700C651EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB0AC21EF18CA700C651EC /* AppDelegate.swift */; };
 		3BDB0AC51EF18CA700C651EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB0AC41EF18CA700C651EC /* ViewController.swift */; };
 		3BDB0AC81EF18CA700C651EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDB0AC61EF18CA700C651EC /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		3B32F0B61EF1BAF50078563E /* myCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myCellView.swift; sourceTree = "<group>"; };
+		3B32F0B81EF1DC7B0078563E /* myData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myData.swift; sourceTree = "<group>"; };
 		3BDB0ABF1EF18CA700C651EC /* myTableViewTutorial_1_170614.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myTableViewTutorial_1_170614.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BDB0AC21EF18CA700C651EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BDB0AC41EF18CA700C651EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				3BDB0AC21EF18CA700C651EC /* AppDelegate.swift */,
 				3BDB0AC41EF18CA700C651EC /* ViewController.swift */,
+				3B32F0B81EF1DC7B0078563E /* myData.swift */,
 				3B32F0B61EF1BAF50078563E /* myCellView.swift */,
 				3BDB0AC61EF18CA700C651EC /* Main.storyboard */,
 				3BDB0AC91EF18CA700C651EC /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 				3B32F0B71EF1BAF50078563E /* myCellView.swift in Sources */,
 				3BDB0AC51EF18CA700C651EC /* ViewController.swift in Sources */,
 				3BDB0AC31EF18CA700C651EC /* AppDelegate.swift in Sources */,
+				3B32F0B91EF1DC7B0078563E /* myData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
