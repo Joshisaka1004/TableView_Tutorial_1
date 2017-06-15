@@ -12,18 +12,23 @@ import UIKit
 
 class myTableViewController: UITableViewController {
 
+    var daten = [myData]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.contentInset = UIEdgeInsets(top: 40, left: 0, bottom: 0, right: 0)
         //we don't need delegate declarations with such a UITableViewController, it knows how to ask for the data source and also knows how to treat/react to user events with our table!
+        let firstRow = myData(puzzles: "Kakuro", checkmarks: false)
+        let secondRow = myData(puzzles: "Sudoku", checkmarks: false)
+        daten.append(contentsOf: [firstRow, secondRow])
     }
     //But we MUST implement two methods to make our table work at all:
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return daten.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let myCells = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        myCells.textLabel?.text = "Kakuro"
+        let myCells = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! myCellView
+        myCells.myLabel.text = daten[indexPath.row].puzzles
         return myCells
     }
 }
