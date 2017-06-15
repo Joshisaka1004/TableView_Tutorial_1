@@ -18,7 +18,9 @@ class myTableViewController: UITableViewController {
         //we don't need delegate declarations with such a UITableViewController, it knows how to ask for the data source and also knows how to treat/react to user events with our table!
         let firstRow = myData(puzzles: "Kakuro", checkmarks: false)
         let secondRow = myData(puzzles: "Sudoku", checkmarks: false)
-        daten.append(contentsOf: [firstRow, secondRow])
+        let thirdRow = myData(puzzles: "Hakyuu", checkmarks: false)
+        let fourthRow = myData(puzzles: "Nurikabe", checkmarks: false)
+        daten.append(contentsOf: [firstRow, secondRow, thirdRow, fourthRow])
     }
     //But we MUST implement two methods to make our table work at all:
     
@@ -43,6 +45,16 @@ class myTableViewController: UITableViewController {
         } else {
             daten[indexPath.row].checkmarks = !daten[indexPath.row].checkmarks
             myCurrentRow?.accessoryType = .none
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "details" {
+            if let myZiel = segue.destination as? DetailViewController {
+                if let myPath = tableView.indexPathForSelectedRow {
+                    myZiel.myIndex = myPath.row
+                }
+                
+            }
         }
     }
     override func viewWillAppear(_ animated: Bool) {

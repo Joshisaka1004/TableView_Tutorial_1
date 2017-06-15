@@ -44,6 +44,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="myLabel" destination="QIl-Zk-QLa" id="Pcv-t8-BaS"/>
+                                    <segue destination="mzg-LT-ZtM" kind="show" identifier="details" id="Cnp-vK-T1G"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -114,7 +115,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyr-oN-lL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1376.8" y="79.610194902548727"/>
+            <point key="canvasLocation" x="1404" y="-254"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="9pX-ru-HaS">
+            <objects>
+                <viewController id="mzg-LT-ZtM" customClass="DetailViewController" customModule="myTableViewTutorial_1_170614" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AuR-sf-9Rt"/>
+                        <viewControllerLayoutGuide type="bottom" id="38i-jt-D7V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Waq-nu-qpG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bcB-Mf-z4B">
+                                <rect key="frame" x="67" y="145" width="240" height="377"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bcB-Mf-z4B" firstAttribute="top" secondItem="AuR-sf-9Rt" secondAttribute="bottom" constant="81" id="I6m-pZ-Dya"/>
+                            <constraint firstItem="bcB-Mf-z4B" firstAttribute="centerY" secondItem="Waq-nu-qpG" secondAttribute="centerY" id="Loq-qz-A7D"/>
+                            <constraint firstItem="bcB-Mf-z4B" firstAttribute="leading" secondItem="Waq-nu-qpG" secondAttribute="leadingMargin" constant="51" id="Ul2-oE-fdr"/>
+                            <constraint firstItem="bcB-Mf-z4B" firstAttribute="centerX" secondItem="Waq-nu-qpG" secondAttribute="centerX" id="slY-WB-5ee"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myTextView" destination="bcB-Mf-z4B" id="1PL-UO-ohP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="guU-qs-h9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1404" y="426.83658170914543"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bTd-90-zvq">

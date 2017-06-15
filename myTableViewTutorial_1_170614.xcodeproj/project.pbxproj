@@ -13,6 +13,7 @@
 		3BDB0AC81EF18CA700C651EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDB0AC61EF18CA700C651EC /* Main.storyboard */; };
 		3BDB0ACA1EF18CA700C651EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDB0AC91EF18CA700C651EC /* Assets.xcassets */; };
 		3BDB0ACD1EF18CA700C651EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDB0ACB1EF18CA700C651EC /* LaunchScreen.storyboard */; };
+		3BE5B1821EF302A000EEB84A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5B1811EF302A000EEB84A /* DetailViewController.swift */; };
 		3BE63BC51EF2B6A800266347 /* myCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE63BC41EF2B6A800266347 /* myCellView.swift */; };
 		3BE63BC71EF2B76900266347 /* myData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE63BC61EF2B76900266347 /* myData.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		3BDB0AC91EF18CA700C651EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BDB0ACC1EF18CA700C651EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BDB0ACE1EF18CA700C651EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BE5B1811EF302A000EEB84A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3BE63BC41EF2B6A800266347 /* myCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myCellView.swift; sourceTree = "<group>"; };
 		3BE63BC61EF2B76900266347 /* myData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +66,7 @@
 				3BDB0AC41EF18CA700C651EC /* ViewController.swift */,
 				3BE63BC41EF2B6A800266347 /* myCellView.swift */,
 				3BDB0AC61EF18CA700C651EC /* Main.storyboard */,
+				3BE5B1811EF302A000EEB84A /* DetailViewController.swift */,
 				3BC665211EF2D7430077F6D0 /* addPuzzleType.swift */,
 				3BE63BC61EF2B76900266347 /* myData.swift */,
 				3BDB0AC91EF18CA700C651EC /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 				3BE63BC51EF2B6A800266347 /* myCellView.swift in Sources */,
 				3BC665221EF2D7430077F6D0 /* addPuzzleType.swift in Sources */,
 				3BDB0AC51EF18CA700C651EC /* ViewController.swift in Sources */,
+				3BE5B1821EF302A000EEB84A /* DetailViewController.swift in Sources */,
 				3BDB0AC31EF18CA700C651EC /* AppDelegate.swift in Sources */,
 				3BE63BC71EF2B76900266347 /* myData.swift in Sources */,
 			);
