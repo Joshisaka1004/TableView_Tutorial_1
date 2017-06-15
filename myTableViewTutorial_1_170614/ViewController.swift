@@ -28,7 +28,22 @@ class myTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let myCells = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! myCellView
         myCells.myLabel.text = daten[indexPath.row].puzzles
+        if daten[indexPath.row].checkmarks == false {
+            myCells.accessoryType = .none
+        } else {
+            myCells.accessoryType = .checkmark
+        }
         return myCells
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let myCurrentRow = tableView.cellForRow(at: indexPath)
+        if daten[indexPath.row].checkmarks == false {
+            daten[indexPath.row].checkmarks = !daten[indexPath.row].checkmarks
+            myCurrentRow?.accessoryType = .checkmark
+        } else {
+            daten[indexPath.row].checkmarks = !daten[indexPath.row].checkmarks
+            myCurrentRow?.accessoryType = .none
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
