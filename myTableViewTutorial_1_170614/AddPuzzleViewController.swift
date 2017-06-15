@@ -17,7 +17,9 @@ class AddPuzzleViewController: UIViewController {
     }
     @IBAction func save(_ sender: UIButton) {
         if let myTemp = myTextField.text {
-            contentForRows.puzzles.append(myTemp)
+            let myTemp2 = myTemp.trimmingCharacters(in: .whitespaces)
+            let myFinal = myTemp2.capitalized
+            contentForRows.puzzles.append(myFinal)
             contentForRows.checkmarks.append(false)
             contentForRows.colors.append(UIColor.white)
             navigationController?.popViewController(animated: true)
