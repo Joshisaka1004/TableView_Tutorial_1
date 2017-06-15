@@ -59,6 +59,10 @@ class myTableViewController: UITableViewController {
         }
         tableView.deselectRow(at: indexPath, animated: false)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
+    }
 }
 
 

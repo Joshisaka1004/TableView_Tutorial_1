@@ -12,7 +12,7 @@ class myCellView: UITableViewCell {
 
     
     @IBOutlet weak var myLabel: UILabel!
-    //We create an I Outlet connection to our prototype cell object in the IB and call this variable "myLabel"
+    //We create an IB Outlet connection to our prototype cell object in the IB and call this variable "myLabel"
     
     override func awakeFromNib() {
         super.awakeFromNib()
