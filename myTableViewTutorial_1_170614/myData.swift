@@ -16,3 +16,4 @@ class myData {
         self.checkmarks = checkmarks
     }
 }
+var daten = [myData]()

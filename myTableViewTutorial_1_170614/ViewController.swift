@@ -12,7 +12,6 @@ import UIKit
 
 class myTableViewController: UITableViewController {
 
-    var daten = [myData]()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.contentInset = UIEdgeInsets(top: 40, left: 0, bottom: 0, right: 0)
@@ -30,6 +29,10 @@ class myTableViewController: UITableViewController {
         let myCells = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! myCellView
         myCells.myLabel.text = daten[indexPath.row].puzzles
         return myCells
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
     }
 }
 

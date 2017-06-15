@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BC665221EF2D7430077F6D0 /* addPuzzleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC665211EF2D7430077F6D0 /* addPuzzleType.swift */; };
 		3BDB0AC31EF18CA700C651EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB0AC21EF18CA700C651EC /* AppDelegate.swift */; };
 		3BDB0AC51EF18CA700C651EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB0AC41EF18CA700C651EC /* ViewController.swift */; };
 		3BDB0AC81EF18CA700C651EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDB0AC61EF18CA700C651EC /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BC665211EF2D7430077F6D0 /* addPuzzleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addPuzzleType.swift; sourceTree = "<group>"; };
 		3BDB0ABF1EF18CA700C651EC /* myTableViewTutorial_1_170614.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myTableViewTutorial_1_170614.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BDB0AC21EF18CA700C651EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BDB0AC41EF18CA700C651EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				3BDB0AC41EF18CA700C651EC /* ViewController.swift */,
 				3BE63BC41EF2B6A800266347 /* myCellView.swift */,
 				3BDB0AC61EF18CA700C651EC /* Main.storyboard */,
+				3BC665211EF2D7430077F6D0 /* addPuzzleType.swift */,
 				3BE63BC61EF2B76900266347 /* myData.swift */,
 				3BDB0AC91EF18CA700C651EC /* Assets.xcassets */,
 				3BDB0ACB1EF18CA700C651EC /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BE63BC51EF2B6A800266347 /* myCellView.swift in Sources */,
+				3BC665221EF2D7430077F6D0 /* addPuzzleType.swift in Sources */,
 				3BDB0AC51EF18CA700C651EC /* ViewController.swift in Sources */,
 				3BDB0AC31EF18CA700C651EC /* AppDelegate.swift in Sources */,
 				3BE63BC71EF2B76900266347 /* myData.swift in Sources */,

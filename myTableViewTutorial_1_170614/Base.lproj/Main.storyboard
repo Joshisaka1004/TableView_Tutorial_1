@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6Aq-c4-RWa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hzw-kz-I52">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Table View Controller-->
+        <!--My Puzzle Collection-->
         <scene sceneID="hrV-ED-pAX">
             <objects>
                 <tableViewController id="6Aq-c4-RWa" customClass="myTableViewController" customModule="myTableViewTutorial_1_170614" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,10 +52,87 @@
                             <outlet property="delegate" destination="6Aq-c4-RWa" id="8qv-Ay-exD"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="My Puzzle Collection" id="DeX-8f-1bz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QQh-Qq-DMg">
+                            <connections>
+                                <segue destination="B3w-8n-w4H" kind="show" identifier="addPuzzle" id="Kc4-SI-rAt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VbK-0q-wBY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-329" y="80"/>
+            <point key="canvasLocation" x="608.79999999999995" y="79.610194902548727"/>
+        </scene>
+        <!--Add Puzzle Type-->
+        <scene sceneID="YDO-1k-tvg">
+            <objects>
+                <viewController id="B3w-8n-w4H" customClass="addPuzzleType" customModule="myTableViewTutorial_1_170614" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bt2-gK-mKD"/>
+                        <viewControllerLayoutGuide type="bottom" id="wrF-AM-Fiq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rdZ-R3-LXS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add your puzzle type request" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kIP-cG-X8X">
+                                <rect key="frame" x="26" y="184" width="323" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1CP-Ry-vVq"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="081-wG-90B">
+                                <rect key="frame" x="127.5" y="254" width="120" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="7SQ-JM-7w7"/>
+                                    <constraint firstAttribute="height" constant="55" id="gpj-CZ-l5A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Save it!"/>
+                                <connections>
+                                    <action selector="save:" destination="B3w-8n-w4H" eventType="touchUpInside" id="ZRs-1O-QJi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84195399284362793" green="0.76645463705062866" blue="0.068504758179187775" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kIP-cG-X8X" firstAttribute="centerX" secondItem="rdZ-R3-LXS" secondAttribute="centerX" id="0dv-H7-jnO"/>
+                            <constraint firstItem="kIP-cG-X8X" firstAttribute="leading" secondItem="rdZ-R3-LXS" secondAttribute="leadingMargin" constant="10" id="M6z-Zb-qX1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kIP-cG-X8X" secondAttribute="trailing" constant="10" id="OFX-wk-jIb"/>
+                            <constraint firstItem="081-wG-90B" firstAttribute="centerX" secondItem="kIP-cG-X8X" secondAttribute="centerX" id="Tq5-5y-UJE"/>
+                            <constraint firstItem="081-wG-90B" firstAttribute="top" secondItem="kIP-cG-X8X" secondAttribute="bottom" constant="40" id="bVj-rk-llI"/>
+                            <constraint firstItem="kIP-cG-X8X" firstAttribute="top" secondItem="bt2-gK-mKD" secondAttribute="bottom" constant="120" id="t68-Pf-izB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myTextfield" destination="kIP-cG-X8X" id="ixO-aa-jyJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pyr-oN-lL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1376.8" y="79.610194902548727"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bTd-90-zvq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hzw-kz-I52" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FZp-1f-VxV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6Aq-c4-RWa" kind="relationship" relationship="rootViewController" id="yLL-ut-XK4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wLP-Qf-LIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330.39999999999998" y="79.610194902548727"/>
         </scene>
     </scenes>
 </document>
