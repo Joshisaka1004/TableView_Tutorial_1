@@ -8,23 +8,30 @@
 
 import UIKit
 
-// In this example I use a UITableViewController, so I've deleted the commom UIViewController from the IB and replaced it by the pre-configured UITableViewController from the object library, I call my correspondig class for this controller "myTableViewController" as you see below, and it inherits from UITableViewController; don't forget to give this new Controller the correct class name (myTableViewController) in the Identity inspector (top row there) and to set it as the Initial View Controller in the Attribute Inspector.
 
 class myTableViewController: UITableViewController {
 
+    @IBOutlet var cellsSection1: [UITableViewCell]!
+    @IBOutlet weak var myTextLabel: UILabel!
+   
+    @IBOutlet weak var myPlaceLabel: UILabel!
+    
+    @IBOutlet weak var myDateLabel: UILabel!
+    
+    @IBOutlet weak var myImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //we don't need delegate declarations with such a UITableViewController, it knows how to ask for the data source and also knows how to treat/react to user events with our table!
+        myTextLabel.text = "Sudoku"
+        myPlaceLabel.text = "Sizes of 6x6, 9x9, 12x12 and 16x16"
+        myImage.image = UIImage(named: "stevie")
+        myImage.contentMode = .scaleAspectFit
+        myImage.backgroundColor = UIColor.lightGray
+        for j in cellsSection1 {
+            j.backgroundColor = UIColor.yellow
+        }
+       
     }
-    //But we MUST implement two methods to make our table work at all:
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let myCells = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        myCells.textLabel?.text = "Kakuro"
-        return myCells
-    }
+
+
 }
 
