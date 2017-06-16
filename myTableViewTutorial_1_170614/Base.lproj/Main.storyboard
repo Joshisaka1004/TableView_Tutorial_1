@@ -54,6 +54,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Puzzle Collection" id="DeX-8f-1bz">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="i2o-Bm-BuM">
+                            <connections>
+                                <action selector="editButton:" destination="6Aq-c4-RWa" id="Zav-en-V0z"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="QQh-Qq-DMg">
                             <connections>
                                 <segue destination="B3w-8n-w4H" kind="show" identifier="addPuzzle" id="Kc4-SI-rAt"/>
@@ -136,6 +141,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPu-RJ-nem">
+                                <rect key="frame" x="153" y="563" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.27172506888449921" green="0.26868812284492372" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Delete!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteButton:" destination="mzg-LT-ZtM" eventType="touchUpInside" id="t41-1F-ZYx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -151,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="guU-qs-h9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1404" y="426.83658170914543"/>
+            <point key="canvasLocation" x="1404" y="425.93703148425789"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bTd-90-zvq">

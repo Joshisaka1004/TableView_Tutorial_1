@@ -57,6 +57,22 @@ class myTableViewController: UITableViewController {
             }
         }
     }
+//Below is another option (more user friendly) to delete certain rows (alernatively or additionaly to what is presented with the delete button in the detail view controller) by giving the chance via an Edit button on the left of the navigation bar; if the table view is in editing mode, another tap on it will disable this mode and vice versa (so, touching the edit button will always switch between enabling and disabling this mode). Once the edit mode is enabled, you see a red cirlce with a minus symbol on the left of the row! If editing mode is enabled you can click this red cirlce and a "delete button"will appear at the right of that row. --> another method will be called when this delete button is clicked, see lines 69-72
+    
+    @IBAction func editButton(_ sender: UIBarButtonItem) {
+        if tableView.isEditing {
+            tableView.setEditing(false, animated: true)
+        } else {
+            tableView.setEditing(true, animated: true)
+        }
+    }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            daten.remove(at: indexPath.row) // after the delete button is clicked, first action is to delete one instance from the array containing the row's data (in "myData.swift") according to the specified indexPath.row
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic) //but in a second step it is this mehtode which finally deletes the row according to the modified "indexPath" structure.
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         tableView.reloadData()
