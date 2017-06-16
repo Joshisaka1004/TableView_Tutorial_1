@@ -72,6 +72,11 @@ class myTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic) //but in a second step it is this mehtode which finally deletes the row according to the modified "indexPath" structure.
         }
     }
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedRow = daten[sourceIndexPath.row]
+        daten.remove(at: sourceIndexPath.row)
+        daten.insert(movedRow, at: destinationIndexPath.row)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
